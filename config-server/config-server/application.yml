@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    # name of the application
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/KashyapShivani04/config_repo.git
+          username: KashyapShivani04
+          password:
+          default-label: main
+
+management:
+  security:
+    # disable security of the config server
+    enabled: false
